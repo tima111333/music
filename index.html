@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UNDERTOW — music for the pressure below sea level</title>
+<meta name="description" content="UNDERTOW — независимый лейбл dub techno, deep ambient и abyssal bass.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<div id="loader">
+  <div id="loader-canvas"></div>
+  <div class="loader-label">опускаем иглу<span> · UNDERTOW</span></div>
+  <div class="loader-bar"><span></span></div>
+</div>
+
+<nav class="site-nav">
+  <a href="index.html" class="brand"><span class="dot"></span> UNDERTOW</a>
+  <div class="nav-links">
+    <a href="index.html">Главная</a>
+    <a href="music.html">Слушать</a>
+    <a href="artists.html">Артисты</a>
+    <a href="about.html">О лейбле</a>
+    <a href="contact.html">Контакты</a>
+  </div>
+  <button class="nav-toggle" aria-label="Меню">☰</button>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Independent label · est. depth 0m</div>
+    <h1>Музыка, которая живёт <em>ниже поверхности</em></h1>
+    <p class="lede">UNDERTOW — лейбл dub techno, deep ambient и abyssal bass. Мы записываем звук так, будто он доносится сквозь толщу воды: приглушённый, плотный, живой. Пять релизов уже на плеере — синтезируются прямо в браузере, без единого mp3.</p>
+    <div class="hero-actions">
+      <a href="music.html" class="btn btn-primary">Слушать сейчас</a>
+      <a href="artists.html" class="btn">Состав лейбла</a>
+    </div>
+
+    <div class="hero-meta">
+      <div><b>05</b>релизов в каталоге</div>
+      <div><b>04</b>артиста и коллектива</div>
+      <div><b>6000м</b>максимальная заявленная глубина</div>
+      <div><b>2019</b>год основания</div>
+    </div>
+  </div>
+</header>
+
+<section class="wrap">
+  <div class="section-head fade-in">
+    <div class="eyebrow">Философия</div>
+    <h2>Три слоя, одна вода</h2>
+    <p>Каждый релиз UNDERTOW привязан к слою океана — не как метафора ради красоты, а как реальный ориентир по плотности звука, темпу и частотам, которые мы оставляем.</p>
+  </div>
+
+  <div class="grid grid-3">
+    <div class="card fade-in">
+      <span class="tag">0–200м · Sunlight</span>
+      <h3>Тёплый верхний слой</h3>
+      <p>Мелодичный ambient и дип-хаус с воздухом в верхних частотах. Здесь ещё видно свет — партии живые, с человеческим дыханием в паузах.</p>
+      <div class="depth-meter">
+        <div class="row"><span>Плотность</span><span>Низкая</span></div>
+        <div class="bar"><span style="width:22%"></span></div>
+      </div>
+    </div>
+    <div class="card fade-in">
+      <span class="tag">200–1000м · Twilight</span>
+      <h3>Сумеречная зона</h3>
+      <p>Даб-техно и приглушённый бас: рисунок ритма ещё узнаваем, но всё окутано реверберацией, будто звук отражается от толщи воды.</p>
+      <div class="depth-meter">
+        <div class="row"><span>Плотность</span><span>Средняя</span></div>
+        <div class="bar"><span style="width:58%"></span></div>
+      </div>
+    </div>
+    <div class="card fade-in">
+      <span class="tag">1000м+ · Midnight</span>
+      <h3>Полуночная зона</h3>
+      <p>Дроун, шум и почти неподвижные текстуры. Темп условен, время растянуто — сюда мы кладём треки, где важнее давление, чем ритм.</p>
+      <div class="depth-meter">
+        <div class="row"><span>Плотность</span><span>Высокая</span></div>
+        <div class="bar"><span style="width:92%"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="section-head fade-in">
+    <div class="eyebrow">Как это сделано</div>
+    <h2>Плеер, который сочиняет на лету</h2>
+    <p>На странице «Слушать» нет ни одного аудиофайла. Каждый трек — это генеративная композиция на Web Audio API: осцилляторы, фильтры и вероятностные паттерны собирают музыку заново при каждом воспроизведении.</p>
+  </div>
+  <div class="grid grid-2">
+    <div class="card fade-in">
+      <span class="tag">Живой синтез</span>
+      <h3>Пять пресетов, бесконечные вариации</h3>
+      <p>Каждый пресет задаёт лад, темп и характер шага секвенсора. Внутри — рандомизация нот и плотности, поэтому дважды одинаково не сыграет.</p>
+    </div>
+    <div class="card fade-in">
+      <span class="tag">Реакция на звук</span>
+      <h3>Частицы чувствуют амплитуду</h3>
+      <p>Фоновое биолюминесцентное поле на этой и других страницах слушает анализатор громкости и разгорается ярче в такт партии баса.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>UNDERTOW</h4>
+        <span>Независимый лейбл электронной музыки.</span>
+        <span>Звук, рождённый под давлением.</span>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <a href="music.html">Слушать</a>
+        <a href="artists.html">Артисты</a>
+        <a href="about.html">О лейбле</a>
+        <a href="contact.html">Контакты</a>
+      </div>
+      <div>
+        <h4>Связь</h4>
+        <a href="contact.html">Букинг и демо</a>
+        <span>hello@undertow.example</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 UNDERTOW RECORDS</span>
+      <span>Звук синтезируется в вашем браузере</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/bg.js"></script>
+<script src="js/loader.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Слушать — UNDERTOW</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<nav class="site-nav">
+  <a href="index.html" class="brand"><span class="dot"></span> UNDERTOW</a>
+  <div class="nav-links">
+    <a href="index.html">Главная</a>
+    <a href="music.html">Слушать</a>
+    <a href="artists.html">Артисты</a>
+    <a href="about.html">О лейбле</a>
+    <a href="contact.html">Контакты</a>
+  </div>
+  <button class="nav-toggle" aria-label="Меню">☰</button>
+</nav>
+
+<header class="page-hero wrap">
+  <div class="eyebrow">Каталог · генеративный синтез</div>
+  <h1>Пять погружений, синтезируемых вживую</h1>
+  <p>Ни одного mp3 на этой странице. Нажмите play — браузер сам соберёт композицию из осцилляторов, фильтров и вероятностных паттернов, по правилам, заданным для каждого трека.</p>
+</header>
+
+<div class="player-shell wrap">
+  <div class="player-layout">
+
+    <div class="player-visual">
+      <div class="disc-wrap">
+        <div class="disc"></div>
+      </div>
+      <div class="now-playing">
+        <div class="title" id="npTitle">—</div>
+        <div class="meta" id="npMeta">—</div>
+      </div>
+
+      <div class="transport">
+        <button id="prevBtn" aria-label="Предыдущий трек">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zM20 6L10 12l10 6z"/></svg>
+        </button>
+        <button id="playBtn" class="play" aria-label="Play/Pause">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <button id="nextBtn" aria-label="Следующий трек">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 6h-2v12h2zM4 6l10 6-10 6z"/></svg>
+        </button>
+      </div>
+
+      <div class="progress">
+        <span id="curTime">0:00</span>
+        <div class="bar" id="progressBar"><span></span></div>
+        <span id="totalTime">0:00</span>
+      </div>
+
+      <div class="volume">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#eef0e6" opacity=".5"><path d="M3 10v4h4l5 5V5L7 10H3z"/></svg>
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="0.7">
+      </div>
+
+      <canvas id="scope"></canvas>
+    </div>
+
+    <div class="tracklist">
+      <div class="track-row active" data-track="0">
+        <span class="idx">01</span>
+        <div class="info"><h4>Thermocline</h4><span>Deep Ambient · D minor · 64 BPM</span></div>
+        <div class="wave"><i style="height:40%"></i><i style="height:80%"></i><i style="height:55%"></i><i style="height:90%"></i></div>
+        <span class="dur">4:40</span>
+      </div>
+      <div class="track-row" data-track="1">
+        <span class="idx">02</span>
+        <div class="info"><h4>Anglerfish Lure</h4><span>Dub Techno · F minor · 122 BPM</span></div>
+        <div class="wave"><i style="height:60%"></i><i style="height:30%"></i><i style="height:95%"></i><i style="height:50%"></i></div>
+        <span class="dur">4:20</span>
+      </div>
+      <div class="track-row" data-track="2">
+        <span class="idx">03</span>
+        <div class="info"><h4>Hydrothermal Vent</h4><span>Industrial Techno · C minor · 128 BPM</span></div>
+        <div class="wave"><i style="height:90%"></i><i style="height:45%"></i><i style="height:70%"></i><i style="height:35%"></i></div>
+        <span class="dur">4:10</span>
+      </div>
+      <div class="track-row" data-track="3">
+        <span class="idx">04</span>
+        <div class="info"><h4>Bioluminescence</h4><span>Melodic Ambient · A minor · 90 BPM</span></div>
+        <div class="wave"><i style="height:50%"></i><i style="height:85%"></i><i style="height:40%"></i><i style="height:65%"></i></div>
+        <span class="dur">3:50</span>
+      </div>
+      <div class="track-row" data-track="4">
+        <span class="idx">05</span>
+        <div class="info"><h4>Trench Silence</h4><span>Drone / Noise · — · 40 BPM</span></div>
+        <div class="wave"><i style="height:20%"></i><i style="height:35%"></i><i style="height:15%"></i><i style="height:25%"></i></div>
+        <span class="dur">5:00</span>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="form-note mt-lg">Совет: наденьте наушники — низкие частоты в «Hydrothermal Vent» и «Trench Silence» рассчитаны на сабвуфер или закрытые наушники.</p>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>UNDERTOW</h4>
+        <span>Независимый лейбл электронной музыки.</span>
+        <span>Звук, рождённый под давлением.</span>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <a href="index.html">Главная</a>
+        <a href="artists.html">Артисты</a>
+        <a href="about.html">О лейбле</a>
+        <a href="contact.html">Контакты</a>
+      </div>
+      <div>
+        <h4>Связь</h4>
+        <a href="contact.html">Букинг и демо</a>
+        <span>hello@undertow.example</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 UNDERTOW RECORDS</span>
+      <span>Звук синтезируется в вашем браузере</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/bg.js"></script>
+<script src="js/main.js"></script>
+<script src="js/player.js"></script>
+</body>
+</html>

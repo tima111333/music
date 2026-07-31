@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Артисты — UNDERTOW</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<nav class="site-nav">
+  <a href="index.html" class="brand"><span class="dot"></span> UNDERTOW</a>
+  <div class="nav-links">
+    <a href="index.html">Главная</a>
+    <a href="music.html">Слушать</a>
+    <a href="artists.html">Артисты</a>
+    <a href="about.html">О лейбле</a>
+    <a href="contact.html">Контакты</a>
+  </div>
+  <button class="nav-toggle" aria-label="Меню">☰</button>
+</nav>
+
+<header class="page-hero wrap">
+  <div class="eyebrow">Состав лейбла</div>
+  <h1>Четыре имени, одна толща воды</h1>
+  <p>Каждый артист UNDERTOW работает на своей глубине — от освещённых верхних слоёв до давления, которое не выдерживает мелодия.</p>
+</header>
+
+<section class="wrap">
+  <div class="grid grid-2">
+
+    <div class="card fade-in">
+      <span class="tag">Ambient / Deep House · 0–200м</span>
+      <h3>Lumen Veil</h3>
+      <p>Сольный проект, работающий с полем и тишиной: длинные пэды, редкие удары ритм-машины и ощущение, что свет ещё пробивается сквозь воду.</p>
+      <div class="depth-meter">
+        <div class="row"><span>Рабочая глубина</span><span>120м</span></div>
+        <div class="bar"><span style="width:20%"></span></div>
+      </div>
+    </div>
+
+    <div class="card fade-in">
+      <span class="tag">Dub Techno · 200–900м</span>
+      <h3>Isobar</h3>
+      <p>Продюсер, названный в честь линии равного давления — треки построены вокруг одного баса, который медленно меняет форму на протяжении восьми минут.</p>
+      <div class="depth-meter">
+        <div class="row"><span>Рабочая глубина</span><span>620м</span></div>
+        <div class="bar"><span style="width:45%"></span></div>
+      </div>
+    </div>
+
+    <div class="card fade-in">
+      <span class="tag">Industrial Techno · 800–3000м</span>
+      <h3>Black Smoker</h3>
+      <p>Дуэт, вдохновлённый гидротермальными источниками: жёсткий индустриальный техно-каркас с шипением и импульсами, будто запись сделана у самого разлома.</p>
+      <div class="depth-meter">
+        <div class="row"><span>Рабочая глубина</span><span>2400м</span></div>
+        <div class="bar"><span style="width:72%"></span></div>
+      </div>
+    </div>
+
+    <div class="card fade-in">
+      <span class="tag">Drone / Field Recording · 3000м+</span>
+      <h3>The Benthic Zone</h3>
+      <p>Открытый коллектив без постоянного состава: каждая запись — коллективная импровизация на грани тишины, куда попадают только те, кто готов ждать.</p>
+      <div class="depth-meter">
+        <div class="row"><span>Рабочая глубина</span><span>5800м</span></div>
+        <div class="bar"><span style="width:96%"></span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="section-head fade-in">
+    <div class="eyebrow">Присоединиться</div>
+    <h2>Отправляете демо?</h2>
+    <p>Мы слушаем всё, что приходит через страницу контактов — вне зависимости от того, на какой «глубине» вы работаете.</p>
+  </div>
+  <a href="contact.html" class="btn btn-primary fade-in">Отправить демо</a>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>UNDERTOW</h4>
+        <span>Независимый лейбл электронной музыки.</span>
+        <span>Звук, рождённый под давлением.</span>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <a href="index.html">Главная</a>
+        <a href="music.html">Слушать</a>
+        <a href="about.html">О лейбле</a>
+        <a href="contact.html">Контакты</a>
+      </div>
+      <div>
+        <h4>Связь</h4>
+        <a href="contact.html">Букинг и демо</a>
+        <span>hello@undertow.example</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 UNDERTOW RECORDS</span>
+      <span>Звук синтезируется в вашем браузере</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/bg.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

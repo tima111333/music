@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>О лейбле — UNDERTOW</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<nav class="site-nav">
+  <a href="index.html" class="brand"><span class="dot"></span> UNDERTOW</a>
+  <div class="nav-links">
+    <a href="index.html">Главная</a>
+    <a href="music.html">Слушать</a>
+    <a href="artists.html">Артисты</a>
+    <a href="about.html">О лейбле</a>
+    <a href="contact.html">Контакты</a>
+  </div>
+  <button class="nav-toggle" aria-label="Меню">☰</button>
+</nav>
+
+<header class="page-hero wrap">
+  <div class="eyebrow">Манифест</div>
+  <h1>Мы записываем звук так, будто он проходит сквозь толщу воды</h1>
+  <p>UNDERTOW начинался как частный архив полевых записей и превратился в лейбл, где технология синтеза так же важна, как и сама музыка.</p>
+</header>
+
+<section class="wrap">
+  <div class="grid grid-2">
+    <div class="fade-in">
+      <div class="eyebrow">Идея</div>
+      <h2 style="font-family:var(--font-display); font-style:italic; font-weight:500; font-size:32px; margin-top:14px; line-height:1.2;">Давление как инструмент продюсирования</h2>
+      <p style="color:var(--foam-dim); margin-top:16px;">Мы просим каждого артиста лейбла выбрать «глубину» перед тем, как начать трек: она определяет, сколько высоких частот можно оставить, насколько плотным должен быть бас и сколько тишины допустимо между звуками. Это не жанровое правило — это способ думать о микшировании как о физическом процессе.</p>
+    </div>
+    <div class="fade-in">
+      <div class="eyebrow">Технология</div>
+      <h2 style="font-family:var(--font-display); font-style:italic; font-weight:500; font-size:32px; margin-top:14px; line-height:1.2;">Каталог, который не занимает места на диске</h2>
+      <p style="color:var(--foam-dim); margin-top:16px;">Начиная с 2024 года часть каталога UNDERTOW существует не как аудиофайлы, а как алгоритмы: страница «Слушать» синтезирует пять релизов прямо в браузере слушателя через Web Audio API, заново на каждое воспроизведение.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="section-head fade-in">
+    <div class="eyebrow">Хронология</div>
+    <h2>История погружений</h2>
+    <p>Реальная последовательность релизов и решений, которые сформировали каталог лейбла.</p>
+  </div>
+
+  <div class="timeline">
+    <div class="t-item fade-in">
+      <div class="idx">01 · 2019</div>
+      <h3>Основание в подвальной студии</h3>
+      <p>UNDERTOW начинается как самиздат-кассета из семи полевых записей, сделанных у побережья, и трёх ambient-набросков.</p>
+    </div>
+    <div class="t-item fade-in">
+      <div class="idx">02 · 2021</div>
+      <h3>Первый винил, первая система «глубин»</h3>
+      <p>Каталог формализует три уровня — Sunlight, Twilight, Midnight — как ориентир для продюсирования, а не жанровую этикетку.</p>
+    </div>
+    <div class="t-item fade-in">
+      <div class="idx">03 · 2023</div>
+      <h3>Присоединяется Black Smoker</h3>
+      <p>Дуэт приносит индустриальный техно-звук, и лейбл впервые выходит за пределы ambient и dub techno.</p>
+    </div>
+    <div class="t-item fade-in">
+      <div class="idx">04 · 2024</div>
+      <h3>Эксперимент с генеративным синтезом</h3>
+      <p>Первый трек, который никогда не сохраняется в виде файла — только как набор правил для Web Audio API.</p>
+    </div>
+    <div class="t-item fade-in">
+      <div class="idx">05 · 2026</div>
+      <h3>Каталог переезжает в браузер</h3>
+      <p>Страница «Слушать» в её нынешнем виде: пять генеративных композиций, ни одного mp3.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>UNDERTOW</h4>
+        <span>Независимый лейбл электронной музыки.</span>
+        <span>Звук, рождённый под давлением.</span>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <a href="index.html">Главная</a>
+        <a href="music.html">Слушать</a>
+        <a href="artists.html">Артисты</a>
+        <a href="contact.html">Контакты</a>
+      </div>
+      <div>
+        <h4>Связь</h4>
+        <a href="contact.html">Букинг и демо</a>
+        <span>hello@undertow.example</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 UNDERTOW RECORDS</span>
+      <span>Звук синтезируется в вашем браузере</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/bg.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
